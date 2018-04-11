@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-03-26T08:59:18.810Z</updated>
+  <updated>2018-04-11T07:36:36.635Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Android MVP设计架构学习</title>
+    <link href="http://yoursite.com/2018/04/11/blog_mvp_Github/"/>
+    <id>http://yoursite.com/2018/04/11/blog_mvp_Github/</id>
+    <published>2018-04-11T07:05:00.000Z</published>
+    <updated>2018-04-11T07:36:36.635Z</updated>
+    
+    <summary type="html">
+    
+      本文只研究MVP设计架构基础版，后续由各大神扩展的升级版以后研究
+    
+    </summary>
+    
+    
+      <category term="Android" scheme="http://yoursite.com/tags/Android/"/>
+    
+      <category term="MVP" scheme="http://yoursite.com/tags/MVP/"/>
+    
+      <category term="设计架构" scheme="http://yoursite.com/tags/%E8%AE%BE%E8%AE%A1%E6%9E%B6%E6%9E%84/"/>
+    
+  </entry>
   
   <entry>
     <title>my first blog</title>
