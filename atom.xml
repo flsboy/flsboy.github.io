@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-04-11T07:36:36.635Z</updated>
+  <updated>2018-06-01T06:53:56.102Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Android P适配总结</title>
+    <link href="http://yoursite.com/2018/06/01/blog_Android%20P_Github/"/>
+    <id>http://yoursite.com/2018/06/01/blog_Android P_Github/</id>
+    <published>2018-06-01T05:00:00.000Z</published>
+    <updated>2018-06-01T06:53:56.102Z</updated>
+    
+    <summary type="html">
+    
+      本文是Android客户端小组对华为提供的Android P适配文档进行调研、学习及总结
+    
+    </summary>
+    
+      <category term="黄涛" scheme="http://yoursite.com/categories/%E9%BB%84%E6%B6%9B/"/>
+    
+    
+      <category term="Android P" scheme="http://yoursite.com/tags/Android-P/"/>
+    
+      <category term="兼容适配" scheme="http://yoursite.com/tags/%E5%85%BC%E5%AE%B9%E9%80%82%E9%85%8D/"/>
+    
+  </entry>
   
   <entry>
     <title>Android MVP设计架构学习</title>
