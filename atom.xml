@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-06-01T06:53:56.102Z</updated>
+  <updated>2018-07-26T05:23:45.395Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Mini Program初探</title>
+    <link href="http://yoursite.com/2018/07/26/Mini_Program/"/>
+    <id>http://yoursite.com/2018/07/26/Mini_Program/</id>
+    <published>2018-07-26T03:00:00.000Z</published>
+    <updated>2018-07-26T05:23:45.395Z</updated>
+    
+    <summary type="html">
+    
+      闲暇之余研究下微信小程序开发
+    
+    </summary>
+    
+      <category term="黄涛" scheme="http://yoursite.com/categories/%E9%BB%84%E6%B6%9B/"/>
+    
+    
+      <category term="微信小程序" scheme="http://yoursite.com/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+      <category term="学习" scheme="http://yoursite.com/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>Android P适配总结</title>

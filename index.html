@@ -62,6 +62,103 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Mini_Program" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/07/26/Mini_Program/" class="article-date">
+  <time datetime="2018-07-26T03:00:00.000Z" itemprop="datePublished">2018-07-26</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/黄涛/">黄涛</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/26/Mini_Program/">Mini Program初探</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="微信小程序"><a href="#微信小程序" class="headerlink" title="微信小程序"></a>微信小程序</h2><h3 id="认知篇"><a href="#认知篇" class="headerlink" title="认知篇"></a>认知篇</h3><p>微信小程序（wei xin xiao cheng xu），简称小程序，英文名Mini Program，是一种不需要下载安装即可使用的应用，它实现了应用“触手可及”的梦想，用户扫一扫或搜一下即可打开应用。<br>全面开放申请后，主体类型为企业、政府、媒体、其他组织或个人的开发者，均可申请注册小程序。小程序、订阅号、服务号、企业号是并行的体系。<br>2017年1月9日，张小龙在2017微信公开课Pro上发布的小程序正式上线。<br>2018年2月，微信官方发布公告称：已对涉及假货高仿、色情低俗和违规“现金贷”等超过2000个小程序，进行永久封禁处理。</p>
+<p>以上内容摘自百度百科</p>
+<h3 id="工具篇"><a href="#工具篇" class="headerlink" title="工具篇"></a>工具篇</h3><p>微信开发工具下载地址：<a href="https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html?t=2018724" target="_blank" rel="noopener">https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html?t=2018724</a><br>安装成功后可以新建一个项目，见下图：</p>
+<p><img src="http://bmob-cdn-18057.b0.upaiyun.com/2018/07/26/d48faa2c40693f0b80d67cd63101ee7a.png" alt=""></p>
+<p>其中AppID需要申请小程序开发账号，填写资料提交审核后可以获取</p>
+<h3 id="开发篇"><a href="#开发篇" class="headerlink" title="开发篇"></a>开发篇</h3><p>目录结构浏览</p>
+<p><img src="http://bmob-cdn-18057.b0.upaiyun.com/2018/07/26/9833a2f54032552e80a03585dba3b855.png" alt=""></p>
+<p>.json JSON配置文件：逻辑层 主要和UI交互进行事件的处理及触发UI页面的渲染等操作；</p>
+<p>.wxml WXML模板文件：UI层 渲染页面，和逻辑层进行交互，触发页面重绘或者渲染等操作；</p>
+<p>.wxss WXSS样式文件： UI层样式控制器</p>
+<p>其中 app.json用于配置全局环境设置，见代码</p>
+<pre><code>{
+  &quot;pages&quot;:[
+&quot;pages/index/index&quot;,
+&quot;pages/logs/logs&quot;
+  ],
+  &quot;window&quot;:{
+&quot;backgroundTextStyle&quot;:&quot;light&quot;,
+&quot;navigationBarBackgroundColor&quot;: &quot;#fff&quot;,
+&quot;navigationBarTitleText&quot;: &quot;WeChat&quot;,
+&quot;navigationBarTextStyle&quot;:&quot;black&quot;
+  }
+}
+</code></pre><p>pages中放在数组第一位的则是启动页，window中主要是运行环境及状态的配置。</p>
+<p>获取用户信息</p>
+<pre><code>    getUserInfo:function(cb){
+  var that = this
+  console.log(1);
+  if(this.globalData.userInfo){
+
+    typeof cb == &quot;function&quot; &amp;&amp; cb(this.globalData.userInfo)
+  }else{
+    //调用登录接口
+    wx.login({
+      success: function () {
+        wx.getUserInfo({
+          success: function (res) {
+            that.globalData.userInfo = res.userInfo
+            typeof cb == &quot;function&quot; &amp;&amp; cb(that.globalData.userInfo)
+          }
+        })
+      }
+    })
+  }
+},
+</code></pre><p>简单一句代码即可获取当前用户信息，其中包括微信名称、头像图片地址、城市、性别等。</p>
+<p>最后通过以下代码，即可达到刷新用户UI页面渲染的效果</p>
+<pre><code>//调用应用实例的方法获取全局数据
+app.getUserInfo(function(userInfo){
+  //更新数据
+  that.setData({
+userInfo:userInfo
+  })
+})
+</code></pre><h3 id="总结篇"><a href="#总结篇" class="headerlink" title="总结篇"></a>总结篇</h3><p>微信小程序的优势在于依附于微信，除了庞大的用户红利之外，对于使用者来说也是非常方便的，不需要过多的手机内存或性能消耗来使用应用。开发起来也很方便，不论是调试还是真机运行都很快捷。最后建议有想法、有追求的同事可以亲身体会下小程序开发，会有意向不到的收获的。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/07/26/Mini_Program/" data-id="cjk247kr60000t8tnj2haxyto" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/微信小程序/">微信小程序</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-blog_Android P_Github" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/06/01/blog_Android P_Github/" class="article-date">
@@ -323,7 +420,7 @@ Ljava/lang/invoke/VarHandle;-&gt;weakCompareAndSetRelease([[Ljava/lang/Object;)Z
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android-P/">Android P</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MVP/">MVP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/兼容适配/">兼容适配</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/设计架构/">设计架构</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android-P/">Android P</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MVP/">MVP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/兼容适配/">兼容适配</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习/">学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/微信小程序/">微信小程序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/设计架构/">设计架构</a></li></ul>
     </div>
   </div>
 
@@ -333,7 +430,7 @@ Ljava/lang/invoke/VarHandle;-&gt;weakCompareAndSetRelease([[Ljava/lang/Object;)Z
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/Android-P/" style="font-size: 10px;">Android P</a> <a href="/tags/MVP/" style="font-size: 10px;">MVP</a> <a href="/tags/兼容适配/" style="font-size: 10px;">兼容适配</a> <a href="/tags/设计架构/" style="font-size: 10px;">设计架构</a>
+      <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/Android-P/" style="font-size: 10px;">Android P</a> <a href="/tags/MVP/" style="font-size: 10px;">MVP</a> <a href="/tags/兼容适配/" style="font-size: 10px;">兼容适配</a> <a href="/tags/学习/" style="font-size: 10px;">学习</a> <a href="/tags/微信小程序/" style="font-size: 10px;">微信小程序</a> <a href="/tags/设计架构/" style="font-size: 10px;">设计架构</a>
     </div>
   </div>
 
@@ -342,7 +439,7 @@ Ljava/lang/invoke/VarHandle;-&gt;weakCompareAndSetRelease([[Ljava/lang/Object;)Z
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">六月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">七月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">六月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a></li></ul>
     </div>
   </div>
 
@@ -353,6 +450,10 @@ Ljava/lang/invoke/VarHandle;-&gt;weakCompareAndSetRelease([[Ljava/lang/Object;)Z
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2018/07/26/Mini_Program/">Mini Program初探</a>
+          </li>
         
           <li>
             <a href="/2018/06/01/blog_Android P_Github/">Android P适配总结</a>
