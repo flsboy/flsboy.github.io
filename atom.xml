@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-07-26T05:23:45.395Z</updated>
+  <updated>2018-08-29T06:13:18.809Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>信息系统项目管理师</title>
+    <link href="http://yoursite.com/2018/08/29/ITPMP/"/>
+    <id>http://yoursite.com/2018/08/29/ITPMP/</id>
+    <published>2018-08-29T05:28:00.000Z</published>
+    <updated>2018-08-29T06:13:18.809Z</updated>
+    
+    <summary type="html">
+    
+      信息系统项目管理师软考备考总结
+    
+    </summary>
+    
+      <category term="黄涛" scheme="http://yoursite.com/categories/%E9%BB%84%E6%B6%9B/"/>
+    
+    
+      <category term="软考" scheme="http://yoursite.com/tags/%E8%BD%AF%E8%80%83/"/>
+    
+      <category term="备考" scheme="http://yoursite.com/tags/%E5%A4%87%E8%80%83/"/>
+    
+  </entry>
   
   <entry>
     <title>Mini Program初探</title>
