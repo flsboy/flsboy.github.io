@@ -39,6 +39,28 @@
   </entry>
   
   <entry>
+    <title>Android项目产品源码集成</title>
+    <link href="http://yoursite.com/2018/08/29/SourceCodeIntegrated/"/>
+    <id>http://yoursite.com/2018/08/29/SourceCodeIntegrated/</id>
+    <published>2018-08-29T05:28:00.000Z</published>
+    <updated>2018-10-19T02:11:45.054Z</updated>
+    
+    <summary type="html">
+    
+      产品源码集成指南
+    
+    </summary>
+    
+      <category term="黄涛" scheme="http://yoursite.com/categories/%E9%BB%84%E6%B6%9B/"/>
+    
+    
+      <category term="产品" scheme="http://yoursite.com/tags/%E4%BA%A7%E5%93%81/"/>
+    
+      <category term="源码" scheme="http://yoursite.com/tags/%E6%BA%90%E7%A0%81/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Mini Program初探</title>
     <link href="http://yoursite.com/2018/07/26/Mini_Program/"/>
     <id>http://yoursite.com/2018/07/26/Mini_Program/</id>
